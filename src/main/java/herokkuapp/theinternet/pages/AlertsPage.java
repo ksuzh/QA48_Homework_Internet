@@ -55,5 +55,4 @@ public class AlertsPage extends BasePage {
         return this;
     }
 
-
 }
