@@ -15,14 +15,28 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@href='/javascript_alerts']")
     WebElement alertsLink;
     public AlertsPage getToAlertsPage() {
-        alertsLink.click();
+        click(alertsLink);
         return new AlertsPage(driver);
     }
 
     @FindBy(xpath = "//a[@href='/frames']")
     WebElement framesLink;
     public FramesPage getToFramesPage() {
-        framesLink.click();
+        click(framesLink);
         return new FramesPage(driver);
+    }
+
+    @FindBy(xpath = "//a[@href='/windows']")
+    WebElement windowsLink;
+    public MultipleWindowPage getToMultiplyWindowsPage() {
+        click(windowsLink);
+        return new MultipleWindowPage(driver);
+    }
+
+    @FindBy(xpath = "//a[@href='/dropdown']")
+    WebElement dropdownLink;
+    public DropDownListPage getToDropdownListPage() {
+        click(dropdownLink);
+        return new DropDownListPage(driver);
     }
 }

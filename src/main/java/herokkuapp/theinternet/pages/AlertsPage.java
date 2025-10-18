@@ -14,7 +14,7 @@ public class AlertsPage extends BasePage {
     @FindBy(xpath = "//button[@onclick='jsAlert()']")
     WebElement jsAlert;
     public AlertsPage alertsJS() {
-        jsAlert.click();
+        click(jsAlert);
         return this;
 
     }
@@ -28,7 +28,7 @@ public class AlertsPage extends BasePage {
     @FindBy(xpath = "//button[@onclick='jsConfirm()']")
     WebElement jsConfirm;
     public AlertsPage alertsConfirmJS(String confirmRes) {
-        jsConfirm.click();
+        click(jsConfirm);
         if(confirmRes != null && confirmRes.equals("Ok")) {
             driver.switchTo().alert().accept();
         }else if(confirmRes != null && confirmRes.equals("Cancel")) {
