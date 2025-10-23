@@ -26,4 +26,12 @@ public class BasePage {
             element.sendKeys(text);
         }
     }
+
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

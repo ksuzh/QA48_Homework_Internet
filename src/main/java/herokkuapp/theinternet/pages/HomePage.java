@@ -39,4 +39,18 @@ public class HomePage extends BasePage {
         click(dropdownLink);
         return new DropDownListPage(driver);
     }
+
+    @FindBy(xpath = "//a[@href='/horizontal_slider']")
+    WebElement horizontalSliderLink;
+    public HorizontalSliderPage getToSliderPage() {
+        click(horizontalSliderLink);
+        return new HorizontalSliderPage(driver);
+    }
+
+    @FindBy(xpath = "//a[@href='/hovers']")
+    WebElement hoversLink;
+    public HoversPage getToHoversPage() {
+        click(hoversLink);
+        return new HoversPage(driver);
+    }
 }
